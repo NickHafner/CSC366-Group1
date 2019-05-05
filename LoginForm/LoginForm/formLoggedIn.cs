@@ -21,5 +21,12 @@ namespace LoginForm
         {
             Application.Exit();
         }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            loginForm objformLogIn = new loginForm();
+            this.Hide();
+            objformLogIn.Show();
+        }
     }
 }
