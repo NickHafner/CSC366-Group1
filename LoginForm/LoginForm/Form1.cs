@@ -39,7 +39,7 @@ namespace LoginForm
 
         private void LogoutButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

@@ -38,24 +38,28 @@
             // 
             // usernameTextBox
             // 
+            this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.usernameTextBox.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(250, 71);
-            this.usernameTextBox.Multiline = true;
+            this.usernameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.usernameTextBox.Location = new System.Drawing.Point(250, 89);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(333, 72);
+            this.usernameTextBox.Size = new System.Drawing.Size(333, 37);
             this.usernameTextBox.TabIndex = 0;
-            this.usernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.usernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.passwordTextBox.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(250, 166);
-            this.passwordTextBox.Multiline = true;
+            this.passwordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.passwordTextBox.Location = new System.Drawing.Point(250, 184);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(333, 72);
+            this.passwordTextBox.Size = new System.Drawing.Size(333, 37);
             this.passwordTextBox.TabIndex = 1;
-            this.passwordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.passwordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // logoutButton
             // 
