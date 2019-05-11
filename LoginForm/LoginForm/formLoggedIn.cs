@@ -17,16 +17,18 @@ namespace LoginForm
             InitializeComponent();
         }
 
+        //This is the exit button; close the application
         private void LoginFormLogoutButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //This is our logout button, closes current form and re-opens the loginForm
         private void LoginButton_Click(object sender, EventArgs e)
         {
             loginForm objformLogIn = new loginForm();
-            this.Hide();
             objformLogIn.Show();
+            this.Hide();
         }
     }
 }

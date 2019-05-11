@@ -18,18 +18,21 @@ namespace LoginForm
             InitializeComponent();
         }
 
+        //Login button
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@" Data Source=DESKTOP-EAB07EH\SQLEXPRESS;Initial Catalog=userLogin;Integrated Security=True");
+            //Create db connection, uses query to return the resulting data in the database
+            SqlConnection conn = new SqlConnection(@" Data Source=DESKTOP-45EM3EC\SQLEXPRESS;Initial Catalog=userLogin;Integrated Security=True");
             string query = "SELECT * FROM logins where username = '" + usernameTextBox.Text.Trim() + "' AND password= '" + passwordTextBox.Text.Trim() + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, conn);
             DataTable dtbl = new DataTable();
             sda.Fill(dtbl);
-            if (dtbl.Rows.Count == 1)
+            //If we find that there is a matching row or more than one matching row login else show message
+            if (dtbl.Rows.Count >= 1)
             {
                 formLoggedIn objformLoggedIn = new formLoggedIn();
-                this.Hide();
                 objformLoggedIn.Show();
+                this.Hide();
             }
             else
             {

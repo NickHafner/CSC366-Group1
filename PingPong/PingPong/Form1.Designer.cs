@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gamePanel = new System.Windows.Forms.Panel();
-            this.paddlePictureBox = new System.Windows.Forms.PictureBox();
-            this.ballPictureBox = new System.Windows.Forms.PictureBox();
-            this.scoreTitleLabel = new System.Windows.Forms.Label();
-            this.scoreLabel = new System.Windows.Forms.Label();
             this.gameOverLabel = new System.Windows.Forms.Label();
+            this.scoreLabel = new System.Windows.Forms.Label();
+            this.scoreTitleLabel = new System.Windows.Forms.Label();
+            this.ballPictureBox = new System.Windows.Forms.PictureBox();
+            this.paddlePictureBox = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.gamePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.paddlePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paddlePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // gamePanel
@@ -54,14 +54,37 @@
             this.gamePanel.Size = new System.Drawing.Size(800, 450);
             this.gamePanel.TabIndex = 0;
             // 
-            // paddlePictureBox
+            // gameOverLabel
             // 
-            this.paddlePictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.paddlePictureBox.Location = new System.Drawing.Point(277, 403);
-            this.paddlePictureBox.Name = "paddlePictureBox";
-            this.paddlePictureBox.Size = new System.Drawing.Size(200, 20);
-            this.paddlePictureBox.TabIndex = 0;
-            this.paddlePictureBox.TabStop = false;
+            this.gameOverLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameOverLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gameOverLabel.Location = new System.Drawing.Point(352, 31);
+            this.gameOverLabel.Name = "gameOverLabel";
+            this.gameOverLabel.Size = new System.Drawing.Size(409, 261);
+            this.gameOverLabel.TabIndex = 4;
+            this.gameOverLabel.Text = "Game Over!\r\n\r\nF1 - Restart Game\r\n\r\nEsc - Exit\r\n";
+            // 
+            // scoreLabel
+            // 
+            this.scoreLabel.AutoSize = true;
+            this.scoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.scoreLabel.Location = new System.Drawing.Point(125, 31);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(21, 24);
+            this.scoreLabel.TabIndex = 3;
+            this.scoreLabel.Text = "0";
+            // 
+            // scoreTitleLabel
+            // 
+            this.scoreTitleLabel.AutoSize = true;
+            this.scoreTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreTitleLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.scoreTitleLabel.Location = new System.Drawing.Point(38, 31);
+            this.scoreTitleLabel.Name = "scoreTitleLabel";
+            this.scoreTitleLabel.Size = new System.Drawing.Size(77, 24);
+            this.scoreTitleLabel.TabIndex = 2;
+            this.scoreTitleLabel.Text = "Score: ";
             // 
             // ballPictureBox
             // 
@@ -72,41 +95,18 @@
             this.ballPictureBox.TabIndex = 1;
             this.ballPictureBox.TabStop = false;
             // 
-            // scoreTitleLabel
+            // paddlePictureBox
             // 
-            this.scoreTitleLabel.AutoSize = true;
-            this.scoreTitleLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreTitleLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.scoreTitleLabel.Location = new System.Drawing.Point(38, 31);
-            this.scoreTitleLabel.Name = "scoreTitleLabel";
-            this.scoreTitleLabel.Size = new System.Drawing.Size(72, 23);
-            this.scoreTitleLabel.TabIndex = 2;
-            this.scoreTitleLabel.Text = "Score: ";
-            // 
-            // scoreLabel
-            // 
-            this.scoreLabel.AutoSize = true;
-            this.scoreLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.scoreLabel.Location = new System.Drawing.Point(125, 31);
-            this.scoreLabel.Name = "scoreLabel";
-            this.scoreLabel.Size = new System.Drawing.Size(21, 23);
-            this.scoreLabel.TabIndex = 3;
-            this.scoreLabel.Text = "0";
-            // 
-            // gameOverLabel
-            // 
-            this.gameOverLabel.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameOverLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gameOverLabel.Location = new System.Drawing.Point(352, 31);
-            this.gameOverLabel.Name = "gameOverLabel";
-            this.gameOverLabel.Size = new System.Drawing.Size(409, 261);
-            this.gameOverLabel.TabIndex = 4;
-            this.gameOverLabel.Text = "Game Over!\r\n\r\nF1 - Restart Game\r\n\r\nEsc - Exit\r\n";
+            this.paddlePictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.paddlePictureBox.Location = new System.Drawing.Point(277, 403);
+            this.paddlePictureBox.Name = "paddlePictureBox";
+            this.paddlePictureBox.Size = new System.Drawing.Size(200, 20);
+            this.paddlePictureBox.TabIndex = 0;
+            this.paddlePictureBox.TabStop = false;
             // 
             // timer1
             // 
-            this.timer1.Interval = 10;
+            this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // gameForm
@@ -122,8 +122,8 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameForm_KeyDown);
             this.gamePanel.ResumeLayout(false);
             this.gamePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.paddlePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paddlePictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

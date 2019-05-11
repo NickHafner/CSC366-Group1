@@ -20,7 +20,8 @@ namespace PingPong
         public gameForm()
         {
             InitializeComponent();
-
+            
+            //Initial game setup; Starts on game over screen
             this.FormBorderStyle = FormBorderStyle.None;
             this.TopMost = true;
             this.Bounds = Screen.PrimaryScreen.Bounds;
@@ -32,13 +33,15 @@ namespace PingPong
             gameOverLabel.Visible = true;
         }
 
+        //Paint next scene based off timer ticks
         private void Timer1_Tick(object sender, EventArgs e)
-        {
+        {   
+            //Moves paddle's xpos based on where the cursor is located
             paddlePictureBox.Left = Cursor.Position.X - (paddlePictureBox.Width / 2);
-
             ballPictureBox.Left += speed_left;
             ballPictureBox.Top += speed_top;
 
+            //Deal with case of the ball hitting the paddle.  Increases ball speed, increment score, and change background
             if (ballPictureBox.Bottom >= paddlePictureBox.Top && ballPictureBox.Bottom <= paddlePictureBox.Bottom && ballPictureBox.Left >= paddlePictureBox.Left && ballPictureBox.Right <= paddlePictureBox.Right)
             {
                 speed_top += 2;
@@ -51,6 +54,7 @@ namespace PingPong
                 gamePanel.BackColor = Color.FromArgb(r.Next(150, 255), r.Next(150, 255), r.Next(150, 255));
             }
 
+            //Deals with case of the ball hitting the edges of the game panel
             if (ballPictureBox.Left <= gamePanel.Left)
             {
                 speed_left = -speed_left;
@@ -64,6 +68,7 @@ namespace PingPong
             {
                 speed_top = -speed_top;
             }
+            //Game over case
             if (ballPictureBox.Bottom >= gamePanel.Bottom)
             {
                 timer1.Enabled = false;
@@ -71,8 +76,10 @@ namespace PingPong
             }
         }
 
+        //Handle key down events
         private void GameForm_KeyDown(object sender, KeyEventArgs e)
         {
+            //Escape key closes app; f1 key setups the game and begins the timer
             if (e.KeyCode == Keys.Escape) { Application.Exit(); }
             if (e.KeyCode == Keys.F1)
             {
